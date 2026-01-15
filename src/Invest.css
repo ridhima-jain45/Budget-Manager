@@ -1,0 +1,320 @@
+*{
+    box-sizing: border-box;
+}
+
+.main{
+  padding:10px;
+}
+
+.chart-box {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* stack chart and calculator */
+  gap: 20px;
+  z-index: 1000;
+  overflow: hidden; /* prevent overflow */
+}
+
+.chart-container {
+  flex: 1; /* take available space above calculator */
+  min-height: 250px; /* ensure chart is not too small */
+  max-height: 60%; /* optional: limit chart height */
+}
+
+.roi-calculator,
+.calculator-box {
+  width: 100%;
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  overflow-y: auto; /* scroll if content exceeds available space */
+}
+
+.roi-calculator h3,
+.calculator-box h2 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #111827;
+}
+
+.form-group,
+.calculator-table .row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form-group label,
+.calculator-table label {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.calculator-table input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.actions>button, .calculator-table>button {
+  width: 100%;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.actions>button:hover, .calculator-table>button:hover{
+  background-color: #1d4ed8;
+}
+
+.roi-result,
+.calculator-table .result span {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 500;
+  color: #16a34a;
+}
+
+/* Responsive adjustment */
+@media (max-width: 1024px) {
+  .chart-box {
+    position: static;
+    width: 90%;
+    height: auto;
+    margin: 20px auto;
+  }
+
+  .chart-container {
+    height: 250px;
+  }
+}
+
+.app {
+  width: auto;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.summary {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+  justify-content: space-evenly;
+  height:10%;
+}
+
+.summary>div{
+  width:45%;
+  height:90%;
+}
+.summary>div:hover{
+  transform: translateY(-5px);
+}
+
+.card {
+  padding: 10px 15px;
+  border-radius: 15px;
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+}
+
+.icon{
+  font-size: 10px;
+}
+
+.income { background-color: #38b2ac; }
+.spent { background-color: #d9879c; }
+.balance { background-color: #3498db; }
+.budget { background-color: #4739da; }
+
+.transactions {
+  background-color: #008080;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.investments-header {
+  display: flex;
+  flex-direction:row;
+  grid-template-columns: 50px 80px 1fr 120px 120px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000;
+  justify-content: space-between;
+}
+
+.start{
+  display:flex;
+  flex-direction: row;
+  margin-left:10px;
+  justify-self:left;
+  justify-content: space-evenly;
+}
+
+.start>span,.end>span{
+  margin:0 10px;
+}
+
+.end{
+  display:flex;
+  flex-direction: row;
+  justify-self: right;
+  justify-content: space-evenly;
+  margin-right:10px;
+}
+
+/*.transaction{
+  display: grid;
+  grid-template-columns: 50px 80px 0.9fr 50px 120px 50px 80px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  background-color: #20b2aa;
+  color: #000;
+  align-items: center;
+}
+
+.transaction-highlight {
+  display: grid;
+  grid-template-columns: 50px 80px 0.9fr 50px 120px 50px 80px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  color: #000;
+  align-items: center;
+  background-color: #ad6f7a;
+}
+
+.transaction-highlight:hover {
+  background-color: #d79aa5;
+}
+
+.transaction:hover {
+  background-color: #37ced6;
+}*/
+
+.transaction{
+  display: flex;
+  grid-template-columns: 50px 80px 0.9fr 50px 120px 50px 80px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  background-color: #20b2aa;
+  color: #000;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.transaction-highlight {
+  display: flex;
+  grid-template-columns: 50px 80px 0.9fr 50px 120px 50px 80px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  color: #000;
+  align-items: center;
+  background-color: #ad6f7a;
+  justify-content: space-evenly;
+}
+
+.transaction:hover {
+  background-color: #37ced6;
+}
+
+.transaction-highlight:hover {
+  background-color: #d79aa5;
+}
+
+
+.actions {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.actions h3{
+  margin:0 auto;
+}
+.actions button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.inputting input {
+  padding: 10px 15px;
+  margin:4px;
+  border-radius: 10px;
+  font-weight: bold;
+  width:45%;
+  height:30%;
+}
+
+
+/*.delete { background-color: #000; color: #fff; }
+.edit { background-color: #87cefa; color: #000; }
+.copy { background-color: #87cefa; color: #000; }
+.add { background-color: #87cefa; color: #000; }*/
+
+.transaction-scroll {
+  max-height: 250px;      
+  overflow-y: auto;
+  padding-right: 5px;
+  margin-bottom: 15px;
+}
+
+.transaction-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.transaction-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+}
+
+h3{
+  size: 50px;
+  color: black;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 95%;
+  margin: auto;
+}
+
+.left-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.right-panel {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

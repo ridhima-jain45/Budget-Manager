@@ -1,0 +1,167 @@
+html{
+  box-sizing: border-box;
+}
+
+.container{
+  height:100vh;
+  width:100vw;
+  align-content: center;
+}
+
+.login-box-ani{
+  background-color: #ebf6f5;
+  height:60vh;
+  width:60vw;
+  margin: auto auto;
+  padding: 0;
+  text-align: center;
+  border-radius:30px;
+  display:flex;
+  flex-direction: row;
+  overflow:hidden;
+  animation: signup 20s ease-in-out 1;
+}
+
+.login-box{
+  background-color: #ebf6f5;
+  height:60vh;
+  width:60vw;
+  margin: auto auto;
+  padding: 0;
+  text-align: center;
+  border-radius:30px;
+  display:flex;
+  flex-direction: row;
+  overflow:hidden;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.welcome{
+  background-color:#5cbdb9;
+  width:40%;
+  height:100%;
+  color:white;
+  display:flex;
+  align-content: center;
+  flex-direction: column;
+}
+
+.welcome>h3{
+  font-size:xx-large;
+  padding-top:5px;
+  padding-left:auto;
+  padding-bottom:5px;
+  padding-top:auto;
+  margin:auto;
+  margin-bottom:0;
+}
+
+.welcome>p{
+  margin:auto;
+  margin-top:0;
+}
+.welcome>button{
+  background-color:#5cbdb9;
+  border:2px solid #018a84;
+  border-radius:10px;
+  margin:auto;
+  margin-top:10px;
+  padding-top:6px;
+  padding-bottom:6px;
+  width:80%;
+}
+
+.welcome>button:hover{
+  background-color:#018a84;
+  border:2px solid #018a84;
+  border-radius:10px;
+  margin:auto;
+  margin-top:10px;
+  padding-top:6px;
+  padding-bottom:6px;
+}
+
+input{
+  height:12%;
+  background-color:white;
+  color:gray;
+  border:3px solid #018a84;
+  border-radius: 10px;
+}
+
+.login{
+  width:60%;
+  height:100%;
+  color:darkslategray;
+  display:flex;
+  align-content: center;
+  flex-direction: column;
+  padding:30px 10%;
+  justify-content: space-evenly;
+  animation: signup 20s ease-in-out 1;
+}
+
+.login>h3{
+  font-size:xx-large;
+  margin: 0 auto;
+}
+
+.login>button{
+  background-color:#018a84;
+  color:white;
+  border-radius:10px;
+}
+
+.login>button:hover{
+  background-color:#136965;
+}
+
+@keyframes login{
+   25% {
+      width:70%;
+   }
+   50% {
+      width:80%;
+   }
+   75% {
+      width:90%;
+   }
+   100% {
+     width:100%;
+   }
+}

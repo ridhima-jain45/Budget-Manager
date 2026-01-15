@@ -1,0 +1,135 @@
+/* Container */
+.bills-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Title */
+h1 {
+  margin-bottom: 20px;
+  color: #00706b;
+  font-size: 2rem;
+}
+
+/* Grid Layout */
+.bills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Bill Card */
+.bill-card {
+  border-radius: 16px;
+  background: linear-gradient(135deg, #3b9491, #5cbdb9);
+  color: white;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.bill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.bill-card h2 {
+  font-size: 1.4rem;
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.bill-card hr {
+  border: 0.5px solid rgba(255, 255, 255, 0.3);
+  margin-bottom: 10px;
+}
+
+.bill-card .amount {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.bill-card .secondary {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin: 4px 0;
+}
+/* Checkbox Label */
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1 rem;
+  margin-top: 10px;
+  margin-left: 70px;
+  color: #f7f7f7;
+}
+
+.checkbox-label input[type="checkbox"] {
+  transform: scale(1.2);
+  cursor: pointer;
+  margin-left: 70px;
+}
+
+
+/* Buttons */
+.bill-card button {
+  cursor: pointer;
+  font-weight: 600;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #00706b;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Variants */
+.add-btn {
+  background-color: #4caf50;
+}
+
+.icon-btn {
+  background-color: #f44336;
+}
+
+.edit-btn {
+  background-color: #2196f3;
+}
+
+.copy-btn {
+  background-color: #ff9800;
+}
+
+/* Form Styling */
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.form input,
+.form select {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  min-width: 150px;
+}
